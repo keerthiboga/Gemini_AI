@@ -8,13 +8,14 @@ import { faClockRotateLeft } from '@fortawesome/free-solid-svg-icons'
 import { faGear } from '@fortawesome/free-solid-svg-icons'
 const navbar = () => {
     const [collapsed,setCollapse]=useState(false);
+    
   return (
     <>
-      <div className="flex flex-col min-h-[100vh] w-fit items-start p-6 justify-between bg-white fixed">
+      <div className="flex flex-col min-h-[100vh] w-fit items-start md:p-6 p-2 justify-between bg-white fixed z-1">
         <div className="flex flex-col gap-6 items-start">
             <FontAwesomeIcon icon={faBars} onClick={()=>setCollapse(prev=>!prev)} className='p-3 text-[#134182] text-xl hover:bg-gray-300 hover:rounded-full'/>
-            <div className='flex items-center gap-2'>
-                <FontAwesomeIcon icon={faPlus} className='p-3  text-[#134182] text-xl hover:bg-gray-300 hover:rounded-full' />
+            <div className='flex items-center gap-2 p-3  hover:bg-gray-300 hover:rounded-full'>
+                <FontAwesomeIcon icon={faPlus} className='text-[#134182] text-xl' />
                 {(collapsed)?<p className='text-[16px] text-[#134182]'>New Chat</p>:null}
             </div>
         </div>
